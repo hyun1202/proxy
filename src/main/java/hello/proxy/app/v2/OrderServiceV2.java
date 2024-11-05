@@ -1,13 +1,14 @@
-package hello.proxy.app.v1;
+package hello.proxy.app.v2;
 
-public class OrderServiceV1Impl implements OrderServiceV1 {
+import hello.proxy.app.v2.OrderRepositoryV2;
+
+public class OrderServiceV2 {
     private final OrderRepositoryV2 orderRepository;
 
-    public OrderServiceV1Impl(OrderRepositoryV2 orderRepository) {
+    public OrderServiceV2(OrderRepositoryV2 orderRepository) {
         this.orderRepository = orderRepository;
     }
 
-    @Override
     public void orderItem(String itemId) {
         orderRepository.save(itemId);
     }

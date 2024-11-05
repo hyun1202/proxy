@@ -1,7 +1,7 @@
-package hello.proxy.app.v1;
+package hello.proxy.app.v2;
 
-public class OrderRepositoryV1Impl implements OrderRepositoryV1 {
-    @Override
+public class OrderRepositoryV2 {
+
     public void save(String itemId) {
         if (itemId.equals("ex")) {
             throw new IllegalStateException("예외 발생!");
